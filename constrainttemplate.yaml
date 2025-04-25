@@ -1,0 +1,19 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8sallowedrepos
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sAllowedRepos
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8sallowedrepos
+
+        violation[{"msg": msg}] {
+          container := input.review.object.spec.containers[_]
+          not startswith(container.image, "docker.cloudsmith.io/")
+          msg := sprintf("Container image '%v' is not from an allowed Cloudsmith repository.", [container.image])
+        }
