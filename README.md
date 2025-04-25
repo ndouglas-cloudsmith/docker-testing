@@ -1,4 +1,4 @@
-# docker-testing
+# Ensuring only Cloudsmith source is allowed in Kubernetes
 Just some commands for interacting with Cloudsmith repository
 
 ```
