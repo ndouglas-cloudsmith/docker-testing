@@ -38,7 +38,22 @@ kubectl apply -f https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-te
 ## Part 3: Create a Constraint to enforce the rule
 This tells Gatekeeper to apply the template to all pods.
 ```
-kubectl apply -f 
+kubectl apply -f https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/constraint.yaml
+```
+
+```
+kubectl apply -f https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/constraint.yaml
+```
+
+First, name your repository as a source:
+```
+helm repo add acme-corporation-acme-repo-one \
+  'https://dl.cloudsmith.io/public/acme-corporation/acme-repo-one/helm/charts/'
+helm repo update
+```
+Once the repository setup is complete, you can install this package with the following command:
+```
+helm install acme-corporation-acme-repo-one/insert-funny-name --version 0.1.0 --generate-name
 ```
 
 <img width="993" alt="Screenshot 2025-04-25 at 13 09 19" src="https://github.com/user-attachments/assets/dfeebacc-fd15-40ec-a337-aa5fdefa380d" />
