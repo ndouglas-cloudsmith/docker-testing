@@ -1,5 +1,5 @@
 # Ensuring only Cloudsmith source is allowed in Kubernetes
-Just some commands for interacting with Cloudsmith repository
+Docker Login credentials are username: ```Cloudsmith Email``` and password: ```Cloudsmith  API Key```
 
 ```
 docker login docker.cloudsmith.io
