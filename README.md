@@ -19,6 +19,9 @@ docker push docker.cloudsmith.io/acme-corporation/acme-repo-one/bitnami/postgres
 
 <img width="1269" alt="Screenshot 2025-04-25 at 12 27 59" src="https://github.com/user-attachments/assets/410cb609-e061-4f01-b040-68405b115aba" />
 
+<img width="1495" alt="Screenshot 2025-04-25 at 12 43 12" src="https://github.com/user-attachments/assets/19026371-dbc9-4fa4-b480-4005fde2f390" />
+
+
 ## Part 1: Install OPA Gatekeeper
 
 ```
