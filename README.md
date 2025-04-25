@@ -44,10 +44,6 @@ This tells Gatekeeper to apply the template to all pods.
 kubectl apply -f https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/constraint.yaml
 ```
 
-```
-kubectl apply -f https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/constraint.yaml
-```
-
 First, name your repository as a source:
 ```
 helm repo add acme-corporation-acme-repo-one \
