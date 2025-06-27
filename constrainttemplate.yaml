@@ -17,3 +17,6 @@ spec:
           not startswith(container.image, "docker.cloudsmith.io/")
           msg := sprintf("Container image '%v' is not from an allowed Cloudsmith repository.", [container.image])
         }
+
+        get_containers := input.review.object.spec.containers
+          else := input.review.object.spec.template.spec.containers
