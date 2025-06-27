@@ -12,11 +12,13 @@ spec:
       rego: |
         package k8sallowedrepos
 
+        # Use the helper rule
         violation[{"msg": msg}] {
-          container := input.review.object.spec.containers[_]
+          container := containers[_]
           not startswith(container.image, "docker.cloudsmith.io/")
           msg := sprintf("Container image '%v' is not from an allowed Cloudsmith repository.", [container.image])
         }
 
+        # Handle both Pod and controller-based containers
         containers := input.review.object.spec.containers
         containers := input.review.object.spec.template.spec.containers
