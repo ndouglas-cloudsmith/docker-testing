@@ -96,3 +96,9 @@ curl -X GET \
   "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/decision_logs/?policy=$SLUG_PERM" \
   -H "X-Api-Key: $CLOUDSMITH_API_KEY" | jq .
 ```
+
+```
+https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/script.sh
+chmod +x script.sh
+bash script.sh
+```
