@@ -58,5 +58,41 @@ helm install acme-corporation-acme-repo-one/insert-funny-name --version 0.1.0 --
 <img width="993" alt="Screenshot 2025-04-25 at 13 09 19" src="https://github.com/user-attachments/assets/dfeebacc-fd15-40ec-a337-aa5fdefa380d" />
 
 
+## Policy Diagnostics Dump
+```
+wget https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/policy-dump.rego
+escaped_policy=$(jq -Rs . < policy-dump.rego)
+cat <<EOF > payload.json
+{
+  "name": "OSV Diagnostic",
+  "description": "Logs all vulnerabilities from security_scan for debugging.",
+  "rego": $escaped_policy,
+  "enabled": true,
+  "is_terminal": false,
+  "precedence": 1
+}
+EOF
 
+curl -X POST "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: $CLOUDSMITH_API_KEY" \
+  -d @payload.json | jq .
+```
 
+```
+export SLUG_PERM=$(curl -s -X GET "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/" -H "X-Api-Key: $CLOUDSMITH_API_KEY" | jq -r '.results[0].slug_perm')
+curl -X POST "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/$SLUG_PERM/actions/" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: $CLOUDSMITH_API_KEY" \
+  -d '{
+    "action_type": "SetPackageState",
+    "precedence": 1,
+    "package_state": "QUARANTINED"
+  }'   | jq .
+```
+
+```
+curl -X GET \
+  "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/decision_logs/?policy=$SLUG_PERM" \
+  -H "X-Api-Key: $CLOUDSMITH_API_KEY" | jq .
+```
