@@ -98,7 +98,7 @@ curl -X GET \
 ```
 
 ```
-https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/script.sh
+wget https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/script.sh
 chmod +x script.sh
 bash script.sh
 ```
