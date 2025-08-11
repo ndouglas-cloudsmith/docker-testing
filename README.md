@@ -102,3 +102,26 @@ wget https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/h
 chmod +x script.sh
 bash script.sh
 ```
+
+
+Alternatively:
+
+```
+wget https://raw.githubusercontent.com/ndouglas-cloudsmith/docker-testing/refs/heads/main/osv-dump.rego
+escaped_policy=$(jq -Rs . < osv-dump.rego)
+cat <<EOF > payload.json
+{
+  "name": "OSV Dump",
+  "description": "Logs output metadata from the OSV fields.",
+  "rego": $escaped_policy,
+  "enabled": true,
+  "is_terminal": false,
+  "precedence": 1
+}
+EOF
+
+curl -X POST "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/" \
+  -H "Content-Type: application/json" \
+  -H "X-Api-Key: $CLOUDSMITH_API_KEY" \
+  -d @payload.json | jq .
+```
