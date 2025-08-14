@@ -1,6 +1,4 @@
-# Policy namespac
 package cloudsmith
-
 default match := false
 
 match if count(malicious_packages) > 0
