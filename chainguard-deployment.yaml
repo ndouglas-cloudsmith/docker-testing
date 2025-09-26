@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chainguard-app
+  labels:
+    app: chainguard-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chainguard-app
+  template:
+    metadata:
+      labels:
+        app: chainguard-app
+    spec:
+      containers:
+        - name: chainguard-app
+          image: docker.cloudsmith.io/acme-corporation/acme-repo-one/chainguard-image:latest
+          ports:
+            - containerPort: 8080
+          securityContext:
+            runAsNonRoot: true               # don’t allow root
+            runAsUser: 1000                  # drop to non-root UID
+            runAsGroup: 1000
+            allowPrivilegeEscalation: false  # disallow `setuid`/`setgid` escalations
+            readOnlyRootFilesystem: true     # prevent writes to container FS
+            capabilities:
+              drop: ["ALL"]                  # drop all Linux capabilities
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir:
+            medium: Memory   # ephemeral writable tmpfs for temp files
+      # Pod-level security (stronger isolation)
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chainguard-app-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: chainguard-app
+  ports:
+    - port: 8080
+      targetPort: 8080
