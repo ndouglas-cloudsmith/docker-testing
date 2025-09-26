@@ -125,3 +125,8 @@ curl -X POST "https://api.cloudsmith.io/v2/workspaces/acme-corporation/policies/
   -H "X-Api-Key: $CLOUDSMITH_API_KEY" \
   -d @payload.json | jq .
 ```
+
+Test application for Kubernetes:
+```
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/refs/heads/main/release/kubernetes-manifests.yaml
+```
