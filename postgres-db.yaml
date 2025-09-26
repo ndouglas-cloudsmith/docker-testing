@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-db-insecure
+  namespace: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-db-insecure
+  template:
+    metadata:
+      labels:
+        app: postgres-db-insecure
+    spec:
+      imagePullSecrets:
+        - name: cloudsmith-creds  # your Cloudsmith secret
+      containers:
+        - name: ai-image-container
+          image: docker.cloudsmith.io/acme-corporation/acme-repo-one/bitnami/postgresql:15.3.0-debian-11-r0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 22   # insecure choice
+            - containerPort: 80
+          env:
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"  # allows container to start without credentials
+          securityContext:
+            privileged: true
+            runAsUser: 0
+            allowPrivilegeEscalation: true
+            capabilities:
+              add:
+                - SYS_ADMIN
+                - NET_RAW
+                - SYS_MODULE
+          volumeMounts:
+            - mountPath: /host
+              name: host-volume
+              readOnly: false
+      volumes:
+        - name: host-volume
+          hostPath:
+            path: /
