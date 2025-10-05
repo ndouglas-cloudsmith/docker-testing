@@ -4,10 +4,6 @@ metadata:
   name: only-cloudsmith-images
 spec:
   match:
-    namespaces:
-      - default
-      - frontend
-      - backend
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
