@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: ctf-admin-binding
+subjects:
+- kind: ServiceAccount
+  name: ctf-developer-sa   # The service account
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: ctf-cluster-admin-role # The all-powerful role
+  apiGroup: rbac.authorization.k8s.io
