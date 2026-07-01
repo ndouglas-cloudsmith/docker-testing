@@ -3,7 +3,7 @@ NIGEL DOUGLAS
 ===============================================================================
 Email: mossydouglas@gmail.com | Phone: (+353)834743639
 Location: Crosshaven, Co. Cork, Republic of Ireland
-LinkedIn/Portfolio: Head of Developer Relations @ Cloudsmith
+Current Job Title: Head of Developer Relations @ Cloudsmith
 
 -------------------------------------------------------------------------------
 PROFESSIONAL SUMMARY
@@ -26,13 +26,13 @@ CORE SKILLS & EXPERTISE
 -------------------------------------------------------------------------------
 * Cloud & Container Security: Container Security, Zero-Trust Network Architecture,
   Software Supply Chain Security, Policy-as-Code.
-* Technologies & Tools: Kubernetes, Docker, Linux Kernel, eBPF, Syscall Inspection,
-  IPTables, Falco Policy Curation, OPA, Wireshark, OSV-Scanner, Calico.
+* Technologies & Tools: Kubernetes, Docker, Linux Kernel, eBPF, Syscall Monitoring,
+  Falco, Tetragon, IPTables, Calico, OPA, Wireshark, OSV-Scanner, Calico.
 * Application & Network Monitoring: APM (AppOptics), Event Logging & Tracing 
   (Loggly), Network Observability, L7 Policy Enforcement.
 * Programming & Scripting: Python, Bash.
 * Developer Relations & Strategy: Technical Marketing, Public Speaking, Community 
-  Outreach, Workshop Creation, Proof-of-Concept (PoC) Labs, Technical Writing.
+  Outreach, Workshop Creation, Proof-of-Concept (Instruqt) Labs, Technical Writing.
 
 -------------------------------------------------------------------------------
 EMPLOYMENT HISTORY
