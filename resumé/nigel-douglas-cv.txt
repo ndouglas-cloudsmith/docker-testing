@@ -1,0 +1,127 @@
+===============================================================================
+NIGEL DOUGLAS
+===============================================================================
+Email: mossydouglas@gmail.com | Phone: (+353)834743639
+Location: Crosshaven, Co. Cork, Republic of Ireland
+LinkedIn/Portfolio: Head of Developer Relations @ Cloudsmith
+
+-------------------------------------------------------------------------------
+PROFESSIONAL SUMMARY
+-------------------------------------------------------------------------------
+Experienced Technical Marketer and Cloud-Native Security Subject Matter Expert 
+(SME) with deep expertise across DevOps, Platform Engineering, and Kubernetes 
+security. Currently leading the Developer Relations program at Cloudsmith, 
+heading global initiatives to secure the software supply chain through open-
+source software best practices, community outreach, and policy-as-code pipeline 
+enhancements. 
+
+Active contributor and leader within the CNCF, OpenSSF, and OWASP ecosystems. 
+Regular CNCF Program Committee Member since 2023, vetting security-specific 
+papers for flagship events like KubeCon and Cloud-Native SecurityCon. Hands-on 
+experience contributing to prominent open-source projects including Falco, 
+Sysdig Inspect, OPA, Wireshark, OSV-Scanner, Calico, and Dependency-Track.
+
+-------------------------------------------------------------------------------
+CORE SKILLS & EXPERTISE
+-------------------------------------------------------------------------------
+* Cloud & Container Security: Container Security, Zero-Trust Network Architecture,
+  Software Supply Chain Security, Policy-as-Code.
+* Technologies & Tools: Kubernetes, Docker, Linux Kernel, eBPF, Syscall Inspection,
+  IPTables, Falco Policy Curation, OPA, Wireshark, OSV-Scanner, Calico.
+* Application & Network Monitoring: APM (AppOptics), Event Logging & Tracing 
+  (Loggly), Network Observability, L7 Policy Enforcement.
+* Programming & Scripting: Python, Bash.
+* Developer Relations & Strategy: Technical Marketing, Public Speaking, Community 
+  Outreach, Workshop Creation, Proof-of-Concept (PoC) Labs, Technical Writing.
+
+-------------------------------------------------------------------------------
+EMPLOYMENT HISTORY
+-------------------------------------------------------------------------------
+Cloudsmith
+Head of Developer Relations                               March 2025 - Present
+* Tasked with building and scaling Cloudsmith's global Developer Relations program.
+* Drive brand visibility and technical engagement within the OpenSSF & CNCF 
+  ecosystems.
+* Architect and build out hands-on Proof-of-Concept (PoC) Labs to demonstrate 
+  supply chain security best practices.
+* Publish authoritative blogs in prominent open-source publications and speak at 
+  major industry conferences.
+  - OpenSSF Feature: https://openssf.org/blog/2026/05/20/detecting-malicious-packages-using-the-osv-api
+  - Open Source Summit Presentation: https://www.youtube.com/watch?v=jRgZtniSXFQ
+
+Sysdig
+Senior Open Source Security Architect                     July 2022 - March 2025
+* Spearheaded technical marketing for the detection & response segment of the 
+  Sysdig Enterprise platform before transitioning to the Open Source Software team.
+* Advanced community adoption for Sysdig Inspect, Falco, Wireshark, and core 
+  runtime security tools.
+* Authored and delivered comprehensive workshop curriculum focused on custom Falco 
+  rule creation, Day 2 operations, and advanced syscall introspection.
+* Partnered closely with the CNCF community to directly usher Falco through its 
+  official graduation process from the CNCF Sandbox.
+* Key Skills: Syscall inspection, eBPF and the Linux kernel, Falco policy curation.
+
+Tigera
+Senior Solutions Architect                                March 2021 - July 2022
+* Guided prospective enterprise clients through technical demonstrations, 
+  qualifications, architectural design, complex PoCs, and interactive lab trials.
+* Specialised in Kubernetes network security utilizing Calico Network Policies 
+  and zero-trust architecture blueprints.
+* Conducted advanced troubleshooting of IPTables & eBPF dataplanes, integrating 
+  deep observability and L7 policy enforcement.
+* Contributed actively to Calico open-source documentation, hosted weekly 
+  community office hours, and led CNCF workshops, webinars, and meetups.
+* Key Skills: Kubernetes, Docker, Linux, Python, Bash, Container Security, Zero-trust.
+
+Solarwinds
+Sales Engineer                                           August 2019 - March 2021
+* Primary technical expert for the AppOptics Application Performance Monitoring 
+  (APM) product suite.
+* Monitored diverse application runtimes, Docker containers, and Kubernetes environments 
+  to isolate and remediate performance bottlenecks.
+* Demonstrated enterprise value by architecting event logging and distributed tracing 
+  solutions via Solarwinds Loggly.
+* Key Skills: Linux & container monitoring, virtualization, traditional network infrastructure.
+
+Malwarebytes
+Sales Engineer                                            January 2018 - July 2019
+* Delivered technical demonstrations showcasing the efficacy of Malwarebytes' 
+  heuristic endpoint detection and response (EDR) scanner.
+* Evaluated and managed MD5 hash VirusTotal samples, safely executing and analyzing 
+  malicious payloads inside approved sandbox environments.
+* Structured and led collaborative workshops educating teams on evolving threats, 
+  including WannaCry ransomware and InfoStealer worms.
+
+-------------------------------------------------------------------------------
+EDUCATION
+-------------------------------------------------------------------------------
+South East Technological University (SETU)                          2023 - 2024
+MSc in Cybersecurity, Privacy and Trust
+* Grade: First Class Honours (1:1)
+
+Technological University of the Shannon (TUS)                       2011 - 2014
+BSc in Creative Multimedia
+
+-------------------------------------------------------------------------------
+CERTIFICATIONS & ECOSYSTEM CREDENTIALS
+-------------------------------------------------------------------------------
+* Program Committee Member: KubeCon + CloudNativeCon Europe 2026
+  Issued by: The Linux Foundation (Dec 2025)
+  Credential URL: https://www.credly.com/badges/72386db5-4ec9-458b-91fa-8ad370c1455b/public_url
+
+* Platform Engineering Ambassador
+  Issued by: Platform Engineering (Mar 2026 | Expires Mar 2027)
+  Credential URL: https://www.virtualbadge.io/certificate-validator?credential=adb338b8-be5d-4095-afa1-ae0f1203be83
+
+* PlatformCon 2026 Virtual Certification
+  Issued by: Platform Engineering (June 2026)
+  Credential URL: https://www.virtualbadge.io/certificate-validator?credential=5107f4ba-5f47-4ea5-a493-91041874a401
+
+-------------------------------------------------------------------------------
+OPEN SOURCE CONTRIBUTIONS
+-------------------------------------------------------------------------------
+Active contributor, advocate, and reviewer across the cloud-native ecosystem:
+* CNCF Program Committee Member (2023 - Present): Reviewing security tracks and papers
+* Open Source Projects: Falco, Sysdig Inspect, OPA, Wireshark, OSV-Scanner, Calico, 
+  Dependency-Track, and OpenSSF initiatives.
+===============================================================================
